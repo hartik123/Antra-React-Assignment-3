@@ -42,22 +42,29 @@ Live Link: [https://starlit-cactus-e2cff6.netlify.app/](https://starlit-cactus-e
 
 # Part 2
 
-What’s the purpose of using the key attribute when we render a list of items in JSX?
-Ans: The items can be distringuised from other similar items present at the same level like for the <li> tag we need to use key attribute. It is similar to how we need file names in the desktop to identify the file. Just by remembvering th eorder it will confusing because if some files are insrete dor deleted or rearranges we won't be able to identify it so that';s why filename is important and imilarly the key is also important as well.
 
-What is the “children” props?
+1. What’s the purpose of using the key attribute when we render a list of items in JSX?
+   
+Ans: The items can be distringuised from other similar items present at the same level like for the ```<li>``` tag we need to use key attribute. It is similar to how we need file names in the desktop to identify the file. Just by remembvering th eorder it will confusing because if some files are insrete dor deleted or rearranges we won't be able to identify it so that';s why filename is important and imilarly the key is also important as well.
+
+2. What is the “children” props?
+   
 Ans: Like how we pass the html tags or have nested html elements in the html file similarly in the React a nested componentedn can be passed to a wrapper component within the oepning and clsoign tag of the component, and it is passed as a children prop to the wrapper component.
 
+```
 ex:
 <NavigationBar>
 <MenuItem /> //children 
 <MenuItem /> //children
 </NavigationBar>
+```
 
-What is pure function and pure component?
+3. What is pure function and pure component?
+   
 Ans: A pure function is a function which returns the same output on the same input everytimne and has no side effects. similarly the Pure component renders the same output on the same props and the same state, and has no side effects.
 
-What is conditional rendering? How do you implement it effectively?
+4. What is conditional rendering? How do you implement it effectively?
+   
 Ans:
 Conditional rendering can be done in 3 ways
 if else -> The JS if else conditinal sytntax can be used for the conditional rendserig
