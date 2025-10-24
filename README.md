@@ -20,6 +20,19 @@
 <img width="1464" height="711" alt="image" src="https://github.com/user-attachments/assets/81b84d8d-1cce-4693-a700-a31202c84b70" />
 
 3.Refactor a series of ? : to if and variables
+<img width="1464" height="711" alt="image" src="https://github.com/user-attachments/assets/fa708abf-3735-4da0-be14-4e3d69ca36c8" />
+
+## Rendering Lists
+
+1.Splitting a list in two
+<img width="1464" height="711" alt="image" src="https://github.com/user-attachments/assets/6f6dc886-79d8-40fb-88c4-b0c14c39541b" />
+
+2.<img width="1464" height="711" alt="image" src="https://github.com/user-attachments/assets/844a47f6-954d-4581-84fc-6806f293c121" />
+
+
+
+
+
 
 
 
