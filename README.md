@@ -30,7 +30,8 @@ Live Link: [https://starlit-cactus-e2cff6.netlify.app/](https://starlit-cactus-e
 1. Implement a traffic light
    <img width="1470" height="721" alt="image" src="https://github.com/user-attachments/assets/2f63bf76-8da8-46d7-87e5-01e55fdd5998" />
 
-
+   Q. Does it make a difference whether you put the alert before or after the setWalk call?
+   Ans. It doesn't make a difference to put before or after. It will be the same because the state will be updated in the next render, and the alert will be using the value of the current state. so the alert can be written before or after it will get the same value which will be true or false.
 
 
 
