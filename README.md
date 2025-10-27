@@ -10,3 +10,29 @@ Live Link: [https://starlit-cactus-e2cff6.netlify.app/](https://starlit-cactus-e
 
 2. Wire up the events 
 <img width="1470" height="720" alt="image" src="https://github.com/user-attachments/assets/8fa7692a-f974-48d0-9e34-da4bd8feb19e" />
+
+## State a Component's Memory
+
+1. Complete the gallery
+<img width="1470" height="720" alt="image" src="https://github.com/user-attachments/assets/0ab8dda1-beed-4d9d-ba94-f9e24b7b432f" />
+
+2. Fix Stuck Form Inputs
+<img width="1470" height="720" alt="image" src="https://github.com/user-attachments/assets/8ed4d508-197c-43b8-b3d3-ab5bedfb5fa5" />
+
+3. Fix a crash
+<img width="1470" height="720" alt="image" src="https://github.com/user-attachments/assets/a8eb4c9c-6904-427a-8fb6-ce7c893f350a" />
+
+4. Remove unnecessary state
+   <img width="1470" height="760" alt="image" src="https://github.com/user-attachments/assets/253ffa52-d254-4f2e-83d7-d8f0ec04b921" />
+
+## State as a Snapshot
+
+1. Implement a traffic light
+   <img width="1470" height="721" alt="image" src="https://github.com/user-attachments/assets/2f63bf76-8da8-46d7-87e5-01e55fdd5998" />
+
+
+
+
+
+
+
