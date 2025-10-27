@@ -1,7 +1,7 @@
 import React from "react";
 import TodoItem from "./TodoItem";
 
-const CompletedTaskList = ({ completedTodos }) => {
+const CompletedTaskList = ({ completedTodos, handleTodoStatusChange, handleTodoDelete , changeParentTodoTitle}) => {
   return (
     <div
       style={{
@@ -16,7 +16,7 @@ const CompletedTaskList = ({ completedTodos }) => {
       <h2 style={{ marginLeft: "1rem" }}>Completed Tasks</h2>
       <ul>
         {completedTodos.map((todo) => {
-          return <TodoItem key={todo.id} {...todo} />;
+          return <TodoItem key={todo.id} {...todo} handleTodoStatusChange={handleTodoStatusChange} handleTodoDelete={handleTodoDelete} changeParentTodoTitle={changeParentTodoTitle}/>;
         })}
       </ul>
     </div>

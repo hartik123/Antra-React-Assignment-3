@@ -1,9 +1,36 @@
-import React from "react";
+import React, { useState } from "react";
 import { MdModeEdit } from "react-icons/md";
 import { MdDelete } from "react-icons/md";
-import { FaArrowRight } from "react-icons/fa";
+import { FaSave } from "react-icons/fa";
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
-const TodoItem = ({ id, title }) => {
+const TodoItem = ({
+  id,
+  title,
+  status,
+  handleTodoStatusChange,
+  handleTodoDelete,
+  changeParentTodoTitle
+}) => {
+  const [todoTitle, setTodoTitle] = useState(title);
+  const [disabled, setDisabled] = useState(true);
+
+  const handleEditTodoTitle = () => {
+    if(disabled){
+      setDisabled(false);
+    }
+    else{
+      setDisabled(true);
+      if(title!==todoTitle){
+        changeParentTodoTitle(id, todoTitle);
+      }
+    }
+  };
+
+  const handleChangeTodoTitle = (e) => {
+    setTodoTitle(e.target.value);
+  };
+
   return (
     <li
       key={id}
@@ -17,7 +44,12 @@ const TodoItem = ({ id, title }) => {
         margin: "1rem",
       }}
     >
-      {title}
+      <input
+        value={todoTitle}
+        disabled={disabled}
+        onChange={handleChangeTodoTitle}
+        style={{width:"300px"}}
+      />
 
       <div>
         <button
@@ -29,8 +61,9 @@ const TodoItem = ({ id, title }) => {
             padding: "5px",
             borderRadius: "3px",
           }}
+          onClick={handleEditTodoTitle}
         >
-          <MdModeEdit />
+          {disabled ? <MdModeEdit /> : <FaSave />}
         </button>
         <button
           style={{
@@ -41,6 +74,7 @@ const TodoItem = ({ id, title }) => {
             padding: "5px",
             borderRadius: "3px",
           }}
+          onClick={() => handleTodoDelete(id)}
         >
           <MdDelete />
         </button>
@@ -52,8 +86,9 @@ const TodoItem = ({ id, title }) => {
             padding: "5px",
             borderRadius: "3px",
           }}
+          onClick={() => handleTodoStatusChange(id)}
         >
-          <FaArrowRight />
+          {status === "completed" ? <FaArrowLeft /> : <FaArrowRight />}
         </button>
       </div>
     </li>
