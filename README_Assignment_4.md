@@ -21,9 +21,10 @@
    <img width="1470" height="721" alt="image" src="https://github.com/user-attachments/assets/97ce7fa0-099d-4b3d-b20a-6a8ca29b4a2b" />
 
    Q. Why is the background moving after the color change?
+   
    Ans: The background is moving because the same object's x and y value is updated on the moving of the shape which is used by the rectangular background for positioning itself. So, now I copied the position object into shape, and now the shape is using a seprate position objcet and the backgeounf is using sperate.
 
-3. Update an object with Immer
+4. Update an object with Immer
    <img width="1470" height="721" alt="image" src="https://github.com/user-attachments/assets/75385250-6464-4f46-84c1-14ac7e8dac49" />
 
 ## Updating Arrays in State
@@ -43,17 +44,21 @@
 
 **Answer the following questions in your own words:**
 1. What is immutability
+   
 Ans: Immutabiliy means the primitaive dataypes like number, string, boolean, cannot be modified inplace, and in React the objects also cannot be modified hhowever in javascript it is possible. So, to store object in a component state and to modify it we have to immutitaive approaches like copying the object propertise first and then using setter methods, or using map and filter methods.
 
-3. What is state update batching and why
+2. What is state update batching and why
+ 
 Ans: The state update batching is a concepot whenern in all the updates to the statein a function are queued and they are batched together to processes in once so that the compinent can be optimised and the rerendering could be efficient.
 
-4. What are the 2 forms of setState argument and what is the difference
+3. What are the 2 forms of setState argument and what is the difference
+   
 Ans: The 2 forms of setState arguments are given below
 a. setState(num+1): replacing the state or the variable directly. Here , it takes the state when the action was done like click or change, and that is passed in the queue like setState(5+1).
 b. setState(num=>num+1): putting the updater function in the queue, and it takes the previous state and then updates the variable.
 
-6. Controlled vs uncontrolled components
+4. Controlled vs uncontrolled components
+   
 Ans: Controlled Components uses React state to handle compnent value wheraes the unocntrolled comopnent manage own state and rely on the DOM, and uses refs to access the values. The controlled compinents are useful for the complex form validations, and making sure the React Lifecycel is followed, and the Uncontrolled compnents can be used for simple form submissions.
 
 
