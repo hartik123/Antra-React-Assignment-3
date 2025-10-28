@@ -59,6 +59,6 @@ b. setState(num=>num+1): putting the updater function in the queue, and it takes
 
 4. Controlled vs uncontrolled components
    
-Ans: Controlled Components uses React state to handle compnent value wheraes the unocntrolled comopnent manage own state and rely on the DOM, and uses refs to access the values. The controlled compinents are useful for the complex form validations, and making sure the React Lifecycel is followed, and the Uncontrolled compnents can be used for simple form submissions.
+Ans: Controlled Components uses React state, onChange, and onClick event handlers to handle component value, whereas the uncontrolled component manages its own state and relies on the DOM, and uses refs to access the values. The controlled components are useful for complex form validations, making sure the React Lifecycle is followed, and the uncontrolled components can be used for simple form submissions.
 
 
