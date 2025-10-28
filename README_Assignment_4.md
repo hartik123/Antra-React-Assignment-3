@@ -54,7 +54,6 @@ a. setState(num+1): replacing the state or the variable directly. Here , it take
 b. setState(num=>num+1): putting the updater function in the queue, and it takes the previous state and then updates the variable.
 
 6. Controlled vs uncontrolled components
-Ans:
-
+Ans: Controlled Components uses React state to handle compnent value wheraes the unocntrolled comopnent manage own state and rely on the DOM, and uses refs to access the values. The controlled compinents are useful for the complex form validations, and making sure the React Lifecycel is followed, and the Uncontrolled compnents can be used for simple form submissions.
 
 
