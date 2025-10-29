@@ -10,18 +10,19 @@ const TodoItem = ({
   status,
   handleTodoStatusChange,
   handleTodoDelete,
-  changeParentTodoTitle
+  changeParentTodoTitle,
+  todoId,
+  setTodoId,
 }) => {
   const [todoTitle, setTodoTitle] = useState(title);
   const [disabled, setDisabled] = useState(true);
 
   const handleEditTodoTitle = () => {
-    if(disabled){
+    if (disabled) {
       setDisabled(false);
-    }
-    else{
+    } else {
       setDisabled(true);
-      if(title!==todoTitle){
+      if (title !== todoTitle) {
         changeParentTodoTitle(id, todoTitle);
       }
     }
@@ -44,12 +45,18 @@ const TodoItem = ({
         margin: "1rem",
       }}
     >
-      <input
+     {
+      todoId===id?
+      ( <input
         value={todoTitle}
         disabled={disabled}
         onChange={handleChangeTodoTitle}
-        style={{width:"300px"}}
-      />
+        style={{ width: "300px" }}
+      />):
+      (
+        <label style={{ width: "300px" }}>{todoTitle}</label>
+      )
+     }
 
       <div>
         <button
@@ -61,7 +68,15 @@ const TodoItem = ({
             padding: "5px",
             borderRadius: "3px",
           }}
-          onClick={handleEditTodoTitle}
+          onClick={()=>{
+            if(disabled){
+              setTodoId(id);
+            }
+            else{
+              setTodoId(null);
+            }
+            handleEditTodoTitle();
+          }}
         >
           {disabled ? <MdModeEdit /> : <FaSave />}
         </button>

@@ -1,7 +1,7 @@
 import React from "react";
 import TodoItem from "./TodoItem";
 
-const PendingTaskList = ({ pendingTodos, handleTodoStatusChange, handleTodoDelete, changeParentTodoTitle}) => {
+const PendingTaskList = ({ pendingTodos, handleTodoStatusChange, handleTodoDelete, changeParentTodoTitle, todoId, setTodoId}) => {
   console.log(pendingTodos);
   return (
     <div
@@ -17,7 +17,8 @@ const PendingTaskList = ({ pendingTodos, handleTodoStatusChange, handleTodoDelet
       <h2 style={{ marginLeft: "1rem" }}>Pending Tasks</h2>
       <ul>
         {pendingTodos.map((todo) => {
-          return <TodoItem key={todo.id} {...todo} handleTodoStatusChange={handleTodoStatusChange} handleTodoDelete={handleTodoDelete} changeParentTodoTitle={changeParentTodoTitle}/>;
+          return <TodoItem key={todo.id} {...todo} handleTodoStatusChange={handleTodoStatusChange} handleTodoDelete={handleTodoDelete} changeParentTodoTitle={changeParentTodoTitle} todoId={todoId}
+          setTodoId={setTodoId}/>;
         })}
       </ul>
     </div>

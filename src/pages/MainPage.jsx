@@ -1,12 +1,33 @@
 import React, { useEffect, useState } from "react";
 import { v4 as uuidv4 } from "uuid";
+import axios from 'axios';
+
 import { todosData } from "../data/todos";
 import PendingTaskList from "../components/PendingTaskList";
 import CompletedTaskList from "../components/CompletedTaskList";
 
 const MainPage = () => {
-  const [todos, setTodos] = useState(todosData || []);
+  const [todos, setTodos] = useState(todosData ||[]);
   const [todoTitle, setTodoTitle] = useState("");
+  const [todoId, setTodoId] = useState(null);
+
+  useEffect(()=>{
+    axios.get('https://dummyjson.com/todos?limit=10')
+    .then(res=>{
+      const fetchedTodos = res.data.todos;
+      const formattedTodos = fetchedTodos.map(todo=>{
+        return {
+          id: todo.id,
+          title: todo.todo,
+          status: todo.completed?"completed":"pending"
+        }
+      })
+      setTodos(formattedTodos);
+    })
+    .catch(err=>{
+      console.log(err)
+    })
+  }, [])
 
   const pendingTodos = todos.filter((todo) => {
     return todo.status.toLowerCase() === "pending";
@@ -79,7 +100,6 @@ const MainPage = () => {
         <form onSubmit={handleAddTodo}>
           <input
             style={{
-              width: "30%",
               padding: "10px 1.3rem",
               fontSize: "1.3rem",
               borderRadius: "2rem",
@@ -110,7 +130,7 @@ const MainPage = () => {
           margin: "1rem 5%",
           display: "flex",
           justifyContent: "center",
-          alignItems: "center",
+          alignItems: "stretch",
         }}
       >
         <PendingTaskList
@@ -118,12 +138,16 @@ const MainPage = () => {
           handleTodoStatusChange={handleTodoStatusChange}
           handleTodoDelete={handleTodoDelete}
           changeParentTodoTitle={changeParentTodoTitle}
+          todoId={todoId}
+          setTodoId={setTodoId}
         />
         <CompletedTaskList
           completedTodos={completedTodos}
           handleTodoStatusChange={handleTodoStatusChange}
           handleTodoDelete={handleTodoDelete}
           changeParentTodoTitle={changeParentTodoTitle}
+          todoId={todoId}
+          setTodoId={setTodoId}
         />
       </div>
     </div>
