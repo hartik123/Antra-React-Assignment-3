@@ -1,4 +1,4 @@
-<img width="1470" height="719" alt="image" src="https://github.com/user-attachments/assets/9cddf1d9-a211-4688-baca-61f3ac8998a7" /># Assignment 6
+# Assignment 6
 
 ## Extracting State Logic into the Reducer
 
