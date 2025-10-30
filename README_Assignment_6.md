@@ -32,7 +32,7 @@ Ans: Props drilling is avoided by using the React's context API, wherein a conte
 
 **c. Compare useState vs useReducer. When is useReducer a better choice?**
 
-Ans: The useState and useReducer both are React Hooks for state management. The useState hook is simpler and easy to understand and needs less code for implementation, but it is inefficient when we want to use it in complex projects. The useReducer takes the reducer and initialState as arguments, and then it returns the state and dispatch. The reducer combines all the operations on the state by writing switch cases inside of it and using the type property in the action to execute the particular case block. So, the reducer manages the state effectively; however, the code needed is comparatively larger, and we need to create an extra reducer as well.
+Ans: The useState and useReducer both are React Hooks for state management. The useState hook is simpler and easy to understand and needs less code for implementation, but it is inefficient when we want to use it in complex projects. The useReducer takes the reducer and initialState as arguments, and then it returns the state and dispatch. The reducer combines all the operations on the state by writing switch cases inside of it and using the type property in the action to execute the particular case block. So, the reducer manages the state effectively; however, the code needed is comparatively larger, and we need to create an extra reducer as well. For complex big projects, and for easier debugging as well as for seperating the update logics from the jsx code reducers are highly beneficial.
 
 **d. How to trigger a re-render in React?**
 
