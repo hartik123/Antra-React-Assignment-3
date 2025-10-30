@@ -28,7 +28,7 @@ Ans: State Lifting is the process in which the individual state of the child com
 
 **b. How to avoid props drilling?**
 
-Ans: Props drilling is avoided by using the React's context API, and the Redux which manages the application’s state in 1 component.
+Ans: Props drilling is avoided by using the React's context API, wherein a context is created first, and then that context is used in the components. Also the next step is to wrap that component with the context so that the value can be passed to all the children components of it.
 
 **c. Compare useState vs useReducer. When is useReducer a better choice?**
 
